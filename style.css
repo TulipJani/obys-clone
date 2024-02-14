@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Silk Serif';
+    src: url(wof2/silkserif-regularitalic-webfont.ttf);
+}
+
+@font-face {
+    font-family: 'Plain Light';
+    src: url(wof2/plain-regular-webfont.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Plain Light';
+    box-sizing: border-box;
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    background: #151515;
+    position: relative;
+}
+
+#loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    background: #0b0b0b;
+    padding: 25vh 10vw;
+}
+
+.line {
+    height: 6.75vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+#line1-part1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    margin: 0 4vw;
+}
+
+
+#line1-part1 h5,
+#line1-part1 h6 {
+    font-size: 3vw;
+    height: max-content;
+    margin-bottom: 1.5vw;
+    font-weight: 100;
+    font-family: 'Silk Serif';
+}
+
+#line1-part1 h5 {
+    text-align: right;
+    width: 5vw;
+}
+
+.line h1 {
+    font-size: 6.7vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: -0.2vw;
+}
+
+.line span {
+    /* background: red; */
+    margin: 1vw;
+    font-size: 6vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-family: 'Silk Serif';
+    animation: anime 2s infinite;
+
+}
+
+@keyframes anime {
+    0% {
+        opacity: 1;
+        font-family: 'Plain Light';
+        color: #fff;
+        font-weight: 500;
+        -webkit-text-stroke: .1vh #ffffff;
+        font-style: normal;
+    }
+
+    48% {
+        opacity: 0;
+        font-family: 'Plain Light';
+        color: #fff;
+        font-weight: 500;
+        -webkit-text-stroke: .1vh #ffffff;
+        font-style: normal;
+    }
+
+    50% {
+        opacity: 1;
+        font-family: 'Slik Serif';
+        color: transparent;
+        font-weight: 500;
+        -webkit-text-stroke: .1vh #ffffff;
+        font-style: italic;
+    }
+
+    100% {
+        opacity: 0;
+        font-family: 'Slik Serif';
+        color: transparent;
+        font-weight: 500;
+        -webkit-text-stroke: .1vh #ffffff;
+        font-style: italic;
+    }
+
+}
+
+
+#page1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #151515;
+}
