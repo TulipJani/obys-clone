@@ -20,6 +20,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    background: #000;
 }
 
 #main {
@@ -27,21 +28,13 @@ body {
     position: relative;
 }
 
-#crsr {
-    width: 3vw;
-    height: 3vw;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    position: fixed;
-    z-index: 999;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
 
 #loader {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 99;
     background: #0b0b0b;
     padding: 25vh 10vw;
@@ -139,6 +132,9 @@ body {
 #page1 {
     width: 100%;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: #151515;
 }
 
@@ -171,8 +167,14 @@ nav {
 }
 
 .hero {
-    width: 72%;
-    margin-left: 27%;
+    width: 80%;
+    height: fit-content;
+    margin-left: 20%;
+    padding-left: 10%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
     position: relative;
 }
 
@@ -189,9 +191,19 @@ nav {
     font-family: 'Silk serif';
 }
 
-.hero h1 {
+.hero h1,
+.hero h2,
+.hero h3 {
     font-size: 7.5vw;
     text-transform: uppercase;
     font-weight: 500;
     line-height: 7.5vw;
+    position: relative;
+    transition: all 200ms ease;
+}
+
+.hero h2:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 100;
 }

@@ -3,8 +3,8 @@ function loadingAnimation() {
 
   tl.from(".line h1", {
     y: 100,
-    stagger: 0.1,
-    duration: 0.3,
+    stagger: 0.2,
+    duration: 0.5,
     delay: 0.5,
   });
   tl.from("#line1-part1", {
@@ -35,7 +35,7 @@ function loadingAnimation() {
     delay: 0.6,
   });
   tl.from("nav", {
-    display: "none",
+    opacity: 0,
   });
   tl.to("#loader", {
     display: "none",
@@ -43,18 +43,18 @@ function loadingAnimation() {
   tl.from("nav", {
     y: -100,
   });
-  
+  tl.from("#hero1 h1, #hero2 h1, #hero3 h2, #hero3 h3, #hero4 h1", {
+    y: 120,
+    stagger: 0.075,
+    ease: "expo",
+    duration: 0.5,
+    delay: 0.2,
+  });
 }
 
 loadingAnimation();
 
-document.addEventListener("mousemove", function (dets) {
-  gsap.to("#crsr", {
-    x: dets.x,
-    y: dets.y,
-  });
-});
-
+Shery.mouseFollower();
 Shery.makeMagnet(".magnet", {
   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
   duration: 1,
