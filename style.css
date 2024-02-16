@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Silk Serif';
-    src: url(wof2/silkserif-regularitalic-webfont.ttf);
+    src: url(wof2/silkserif-regularitalic-webfont.woff);
 }
 
 @font-face {
@@ -13,6 +13,7 @@
     padding: 0;
     font-family: 'Plain Light';
     box-sizing: border-box;
+    cursor: none;
     color: #fff;
 }
 
@@ -21,6 +22,18 @@ body {
     height: 100%;
     width: 100%;
     background: #000;
+}
+
+#crsr {
+    width: 3vw;
+    height: 3vw;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: transparent;
+    position: absolute;
+    z-index: 9999;
+    pointer-events: none;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 100ms;
 }
 
 #main {
@@ -167,29 +180,18 @@ nav {
 }
 
 .hero {
-    width: 80%;
+    width: 72%;
     height: fit-content;
-    margin-left: 20%;
-    padding-left: 10%;
-    position: relative;
+    margin-left: 28%;
     overflow: hidden;
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 .hero:nth-child(2) {
     margin-top: 10vh;
 }
 
-.hero:nth-child(2) h1::before {
-    content: '01';
-    position: absolute;
-    left: -7vw;
-    top: -1vw;
-    font-size: 3vw;
-    font-family: 'Silk serif';
-}
 
 .hero h1,
 .hero h2,
@@ -198,8 +200,6 @@ nav {
     text-transform: uppercase;
     font-weight: 500;
     line-height: 7.5vw;
-    position: relative;
-    transition: all 200ms ease;
 }
 
 .hero h2:hover {
